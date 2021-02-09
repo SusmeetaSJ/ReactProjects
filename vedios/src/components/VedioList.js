@@ -1,9 +1,9 @@
 import React from 'react';
 import VedioItem from './VedioItem';
-const VedioList = (props) => {
-    const list=props.vedios.map((vedio)=>{
-        return <VedioItem></VedioItem>
+const VedioList = ({vedios,onVedioSelect}) => {
+    const list=vedios.map((vedio)=>{
+        return <VedioItem vedio={vedio} onVedioSelect={onVedioSelect}/>
     })
-return <div>{list}</div>
+return <div className='ui relaxed divided list'>{list}</div>
 }
 export default VedioList;
